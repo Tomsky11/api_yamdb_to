@@ -4,6 +4,7 @@ from .models import Titles
 
 
 class TitleFilter(filters.FilterSet):
+    '''Фильтр поизведений'''
     name = filters.CharFilter(field_name='name', lookup_expr='contains')
     category = filters.CharFilter(field_name='category__slug',
                                   lookup_expr='exact')
